@@ -1,0 +1,131 @@
+/* style8.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  max-width: 420px;
+  width: 100%;
+  padding: 30px 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2.1rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.upload-section {
+  margin-bottom: 20px;
+}
+
+.upload-label {
+  background: #5c67f2;
+  padding: 12px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  box-shadow: 0 4px 12px rgba(92, 103, 242, 0.6);
+}
+
+.upload-label:hover {
+  background: #4351d1;
+}
+
+.upload-label input[type="file"] {
+  display: none;
+}
+
+.preview-section {
+  margin-bottom: 25px;
+}
+
+.preview-section h2 {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 0 0 4px #000;
+}
+
+#previewImage {
+  max-width: 100%;
+  max-height: 320px;
+  border-radius: 14px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  object-fit: contain;
+  background: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-decoration: none;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.btn.primary {
+  background: #ff5e62;
+  background: linear-gradient(45deg, #ff5e62, #ff9966);
+}
+
+.btn.primary:hover {
+  background: linear-gradient(45deg, #e04e53, #e0824c);
+}
+
+.btn.download {
+  background: #00c6ff;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+}
+
+.btn.download:hover {
+  background: linear-gradient(45deg, #00a0e6, #005bc1);
+}
+
+footer {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  user-select: none;
+}

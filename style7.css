@@ -1,0 +1,54 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  direction: rtl;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 90%;
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: #00796b;
+}
+
+.buttons .btn {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.btn.whatsapp {
+  background-color: #25D366;
+}
+
+.btn.telegram {
+  background-color: #0088cc;
+}
+
+.btn.facebook {
+  background-color: #3b5998;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}

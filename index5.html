@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>لوحة المعلم - إعداد الامتحان</title>
+  <link rel="stylesheet" href="style5.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>ALrayan forms</h1>
+    <input type="text" id="examTitle" placeholder="عنوان الامتحان" />
+    <div id="questions"></div>
+    <button onclick="addQuestion()">إضافة سؤال</button>
+    <button onclick="addOptionalQuestion()">إضافة سؤال اختياري</button>
+    <button onclick="generateExam()">إنشاء الامتحان</button>
+    <textarea id="examLink" placeholder="رابط الامتحان للطالب" readonly></textarea>
+  </div>
+  <script src="script5.js"></script>
+</body>
+</html>

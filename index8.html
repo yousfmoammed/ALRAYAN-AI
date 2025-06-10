@@ -1,0 +1,32 @@
+<!-- index8.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تحويل الصورة إلى PDF - ALRAYAN</title>
+   <link href="exam.png.jpeg" type="image/x-icon" rel="icon" />
+    <link rel="stylesheet" href="style8.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>تحويل الصورة إلى PDF</h1>
+        <div class="upload-section">
+            <label for="imageInput" class="upload-label">
+                اختر صورة من جهازك
+                <input type="file" id="imageInput" accept="image/*" />
+            </label>
+        </div>
+        <div class="preview-section" id="previewSection" style="display:none;">
+            <h2>معاينة الصورة</h2>
+            <img id="previewImage" alt="معاينة الصورة" />
+        </div>
+        <div class="buttons" id="buttons" style="display:none;">
+            <button id="convertBtn" class="btn primary">تحويل إلى PDF</button>
+            <a id="downloadLink" class="btn download" style="display:none;" download="image.pdf">تحميل PDF</a>
+        </div>
+        <footer>© ALRAYAN</footer>
+    </div>
+    <script src="script8.js"></script>
+</body>
+</html>

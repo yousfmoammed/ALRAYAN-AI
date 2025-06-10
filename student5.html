@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>امتحان الطالب</title>
+  <link rel="stylesheet" href="style5.css" />
+</head>
+<body>
+  <div class="container" id="examContainer"></div>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem("examData"));
+    const now = Date.now();
+
+    if (!data || (now - data.createdAt) > 2 * 24 * 60 * 60 * 1000) {
+      document.getElementById("examContainer").innerHTML = "<h2>انتهت صلاحية الامتحان.</h2>";
+    } else {
+      const form = document.createElement("form");
+      form.innerHTML = "<h2>" + data.title + "</h2><input placeholder='اسم الطالب' required/><br><br>";
+
+      let correct = 0;
+      let total = 0;
+
+      data.questions.forEach((q, i) => {
+        form.innerHTML += `<div class="question-block"><label>${q.text} ${q.optional ? '(اختياري)' : ''}</label><br>`;
+        if (q.image) form.innerHTML += `<img src="${q.image}"><br>`;
+
+        if (q.type === "text") {
+          form.innerHTML += `<textarea name="q${i}" ${q.optional ? "" : "required"}></textarea></div><br>`;
+        } else if (q.type === "choice") {
+          form.innerHTML += `<div class="option-container">`;
+          q.options.forEach((opt, j) => {
+            form.innerHTML += `
+              <label>
+                <input type="radio" name="q${i}" value="${j}" ${q.optional ? "" : "required"}>
+                ${opt}
+              </label>
+            `;
+          });
+          form.innerHTML += `</div></div><br>`;
+        }
+      });
+
+      form.innerHTML += `<button type="submit">إرسال</button>`;
+      form.onsubmit = function (e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        let score = 0;
+        data.questions.forEach((q, i) => {
+          if (q.type === "choice" && q.correctIndex !== null) {
+            const ans = formData.get(`q${i}`);
+            if (ans !== null && parseInt(ans) === q.correctIndex) {
+              score += q.grade;
+            }
+          }
+        });
+        alert("تم إرسال الامتحان ✅\nدرجتك: " + score + " من " + data.questions.reduce((a, q) => a + (q.grade || 0), 0));
+        form.reset();
+      };
+
+      document.getElementById("examContainer").appendChild(form);
+    }
+  </script>
+</body>
+</html>

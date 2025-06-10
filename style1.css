@@ -1,0 +1,113 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  direction: rtl;
+  padding: 30px;
+  color: #333;
+}
+
+h1, h3 {
+  text-align: center;
+  color: #004080;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+.info {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#result {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+.box-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.box {
+  flex: 1 1 250px;
+  border: 2px solid #08e062;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  text-align: center;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ✅ تنسيق المستطيل الطولي الجديد */
+.vertical-analysis {
+  border: 2px solid #0074d9;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.vertical-analysis .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.vertical-analysis .row:last-child {
+  border-bottom: none;
+}
